@@ -12,6 +12,9 @@ end
 module AliveFulfillmentApp
   class Application < Rails::Application
     
+    # Required by Heroku
+    config.assets.initialize_on_precompile = false
+    
     # Shopify API connection credentials:
     config.shopify.api_key = '70ab1be355ae5dafab7330c011ccc521'
     config.shopify.secret = '28a2cd4dddd3c55afcc5a3686a7e502f'

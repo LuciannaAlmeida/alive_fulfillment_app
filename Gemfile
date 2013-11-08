@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.0.0'
+
 gem 'rails', '3.2.15'
 
 # Bundle edge Rails instead:
@@ -12,6 +14,7 @@ gem 'pg'
 
 # Shopify gem
 gem 'shopify_app'
+
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -45,4 +48,9 @@ gem 'jquery-rails'
 group :development, :test do
   gem "less-rails-bootstrap"
   gem "therubyracer", :platforms => :ruby
+end
+
+group :production do
+  # Heroku indication
+  gem 'rails_12factor'
 end
